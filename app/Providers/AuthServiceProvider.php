@@ -27,6 +27,7 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
         
+        // Garda de rota, controle de acesso
         if(!App::runningInConsole()){
             foreach ($this->listPermissions() as $key => $permission) {
                 Gate::define($permission->name, function ($user) use($permission) {

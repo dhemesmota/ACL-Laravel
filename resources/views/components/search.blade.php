@@ -1,7 +1,9 @@
 <form class="form-inline" method="GET" action="{{route($routeName.'.index')}}">
-    <div class="form-group mb-2">
-        <a href="{{ route($routeName.'.create') }}">{{ __('linguagem.add') }}</a>
-    </div>
+        @can('create-user')
+            <div class="form-group mb-2">
+                <a href="{{ route($routeName.'.create') }}">{{ __('linguagem.add') }}</a>
+            </div>
+        @endcan
     <div class="form-group mx-sm-3 mb-2">
         <input type="search" name="search" class="form-control form-control-sm" placeholder="{{ __('linguagem.search') }}" value="{{$search}}">
     </div>

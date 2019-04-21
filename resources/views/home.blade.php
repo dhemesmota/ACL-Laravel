@@ -15,16 +15,17 @@
                     @endif
 
                     <div class="row">
+                        <!-- Permissão para listar usuários -->
                         @can('list-users')
                             
-                        <div class="col-md-3">
-                            <div style="cursor:pointer" onclick="window.location = '{{ route('users.index') }}'" class="card text-white bg-primary mb-3">
-                                <div class="card-header">@lang('linguagem.list',['page'=>__('linguagem.user_list')])</div>
-                                <div class="card-body">
-                                    <p class="card-text">{{ __('linguagem.create_or_edit') }}</p>
+                            <div class="col-md-3">
+                                <div style="cursor:pointer" onclick="window.location = '{{ route('users.index') }}'" class="card text-white bg-primary mb-3">
+                                    <div class="card-header">@lang('linguagem.list',['page'=>__('linguagem.user_list')])</div>
+                                    <div class="card-body">
+                                        <p class="card-text">{{ __('linguagem.create_or_edit') }}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
                         @endcan
                         <div class="col-md-3">
