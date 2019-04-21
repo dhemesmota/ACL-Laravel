@@ -46,4 +46,12 @@ return [
     'create_or_edit'=>'Criar ou editar',
     'role_list'=>'Funções',
     'role'=>'Função',
+    'betting_list'=>'Bolões',
+    'welcome_betting'=>'Bem vindo ao site de Bolões',
+    'enjoy_with_your_family'=>'Curta com sua família',
+    'check_here'=>'Confira aqui',
+    'join_or_create_your'=>'Participe ou crie o seu!',
+    'privacy_policy'=>'Politica de Privacidade',
+    'terms_of_use'=>'Termos de Uso',
+    'copyright'=>'Direito autoral',
 ];

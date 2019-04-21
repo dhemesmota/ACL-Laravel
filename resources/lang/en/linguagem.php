@@ -46,4 +46,12 @@ return [
     'create_or_edit'=>'Create or edit',
     'role_list'=>'Roles',
     'role'=>'Role',
+    'betting_list'=>'Betting List',
+    'welcome_betting'=>'Welcome to the betting list site',
+    'enjoy_with_your_family'=>'Enjoy with your family',
+    'check_here'=>'Check here',
+    'join_or_create_your'=>'Join or create your!',
+    'privacy_policy'=>'Privacy Policy',
+    'terms_of_use'=>'Terms of Use',
+    'copyright'=>'Copyright',
 ];

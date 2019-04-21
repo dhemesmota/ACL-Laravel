@@ -23,13 +23,21 @@ Route::get('lang', function () {
     return redirect()->back();
 })->name('lang');
 
-Route::get('/', function () {
-    return view('welcome');
+// Rota pagina de boas vindas
+Route::get('/modelo', function () {
+    return view('modelo.welcome');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::namespace('Site')->group(function (){
+    Route::get('/', 'PrincipalController@index')->name('principal');
+});
+
+// namespace : é a pasta onde está as controllers
+Route::middleware('auth')->namespace('Admin')->group(function (){
+    Route::get('/home', 'HomeController@index')->name('home');
+});
 
 // Rotas para o administrativo 
 // Usando o middleware('can:') para barrar acesso não autorizado

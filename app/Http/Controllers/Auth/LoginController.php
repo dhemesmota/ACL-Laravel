@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/home'; // alterar caso mude o caminho. no acesso na rota
 
     /**
      * Create a new controller instance.
