@@ -1,0 +1,9 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "C:\\Users\\dheme\\Documents\\Dev\\Laravel\\bolao\\database\\database.sqlite",
+            "dialect": "SQLite",
+            "name": "database"
+        }
+    ]
+}
