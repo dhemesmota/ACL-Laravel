@@ -44,12 +44,12 @@ Route::middleware('auth')->namespace('Admin')->group(function (){
 Route::prefix('admin')->middleware('auth')->namespace('Admin')->group(function (){
     // Controle users
     Route::resource('/users', 'UserController');
-    Route::get('/users','UserController@index')->name('users.index')->middleware('can:list-users');
+    Route::get('/users','UserController@index')->name('users.index')->middleware('can:list-user');
     Route::get('/users/{user}','UserController@show')->name('users.show')->middleware('can:show-user');
     Route::get('/users/{user}/edit','UserController@edit')->name('users.edit')->middleware('can:edit-user'); 
     Route::get('/users/create','UserController@create')->name('users.create')->middleware('can:create-user');
     Route::post('/users','UserController@store')->name('users.store')->middleware('can:create-user');
-    Route::put('/users','UserController@update')->name('users.update')->middleware('can:edit-user');
+    Route::put('/users/{user}','UserController@update')->name('users.update')->middleware('can:edit-user');
     Route::delete('/users/{user}','UserController@destroy')->name('users.destroy')->middleware('can:delete-user');
 
     Route::resource('/permissions', 'PermissionController');

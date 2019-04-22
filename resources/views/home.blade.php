@@ -14,37 +14,59 @@
                         </div>
                     @endif
 
-                    <div class="row">
-                        <!-- Permissão para listar usuários -->
-                        @can('list-users')
-                            
-                            <div class="col-md-3">
-                                <div style="cursor:pointer" onclick="window.location = '{{ route('users.index') }}'" class="card text-white bg-primary mb-3">
-                                    <div class="card-header">@lang('linguagem.list',['page'=>__('linguagem.user_list')])</div>
-                                    <div class="card-body">
-                                        <p class="card-text">{{ __('linguagem.create_or_edit') }}</p>
+                    <!-- Bolões Grid -->
+                    <span id="portfolio">
+                        <div class="row">
+                            @can('list-user')
+                            <!-- Permissão para listar usuários -->
+                                <div style="cursor:pointer" onclick="window.location = '{{ route('users.index') }}'"  class="col-md-4 col-sm-6 portfolio-item">
+                                    <a class="portfolio-link">
+                                        <div class="portfolio-hover">
+                                            <div class="portfolio-hover-content">
+                                            <i class="fas fa-plus fa-3x"></i>
+                                            </div>
+                                        </div>
+                                        <img class="img-fluid" src="{{ asset('img/portfolio/05-thumbnail.jpg') }}" alt="">
+                                    </a>
+                                    <div class="portfolio-caption">
+                                        <h4>@lang('linguagem.list',['page'=>__('linguagem.user_list')])</h4>
+                                        <p class="text-muted">{{ __('linguagem.create_or_edit') }}</p>
                                     </div>
                                 </div>
-                            </div>
+                            @endcan
+                            <!-- Permissão para listar funções -->
+                                <div style="cursor:pointer" onclick="window.location = '{{ route('roles.index') }}'"  class="col-md-4 col-sm-6 portfolio-item">
+                                    <a class="portfolio-link">
+                                        <div class="portfolio-hover">
+                                            <div class="portfolio-hover-content">
+                                            <i class="fas fa-plus fa-3x"></i>
+                                            </div>
+                                        </div>
+                                        <img class="img-fluid" src="{{ asset('img/portfolio/03-thumbnail.jpg') }}" alt="">
+                                    </a>
+                                    <div class="portfolio-caption">
+                                        <h4>@lang('linguagem.list',['page'=>__('linguagem.role_list')])</h4>
+                                        <p class="text-muted">{{ __('linguagem.create_or_edit') }}</p>
+                                    </div>
+                                </div>
+                            <!-- Permissão para listar permissões -->
+                                <div style="cursor:pointer" onclick="window.location = '{{ route('permissions.index') }}'"  class="col-md-4 col-sm-6 portfolio-item">
+                                    <a class="portfolio-link">
+                                        <div class="portfolio-hover">
+                                            <div class="portfolio-hover-content">
+                                            <i class="fas fa-plus fa-3x"></i>
+                                            </div>
+                                        </div>
+                                        <img class="img-fluid" src="{{ asset('img/portfolio/02-thumbnail.jpg') }}" alt="">
+                                    </a>
+                                    <div class="portfolio-caption">
+                                        <h4>@lang('linguagem.list',['page'=>__('linguagem.permission_list')])</h4>
+                                        <p class="text-muted">{{ __('linguagem.create_or_edit') }}</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </span>
 
-                        @endcan
-                        <div class="col-md-3">
-                            <div style="cursor:pointer" onclick="window.location = '{{ route('roles.index') }}'" class="card text-white bg-success mb-3">
-                                <div class="card-header">@lang('linguagem.list',['page'=>__('linguagem.role_list')])</div>
-                                <div class="card-body">
-                                    <p class="card-text">{{ __('linguagem.create_or_edit') }}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div style="cursor:pointer" onclick="window.location = '{{ route('permissions.index') }}'" class="card text-white bg-danger mb-3">
-                                <div class="card-header">@lang('linguagem.list',['page'=>__('linguagem.permission_list')])</div>
-                                <div class="card-body">
-                                    <p class="card-text">{{ __('linguagem.create_or_edit') }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

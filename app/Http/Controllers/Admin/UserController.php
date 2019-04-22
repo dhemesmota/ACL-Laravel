@@ -190,8 +190,6 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
 
-        $this->authorize('edit-user');
-
         $data = $request->all();
 
         if(!$data['password']){
